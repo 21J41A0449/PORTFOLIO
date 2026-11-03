@@ -463,11 +463,11 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 800; line-hei
   align-items: center;
   gap: 0.6rem;
   padding: 0.95rem 2rem;
-  background: var(--lime);
-  color: var(--ink);
+  background: linear-gradient(135deg, #e1c18e 0%, #d4ae78 100%);
+  color: #15141d;
   font-family: var(--font-display);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
@@ -475,13 +475,13 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 800; line-hei
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--dur-mid) var(--ease-out);
-  box-shadow: 0 0 50px rgba(var(--lime-rgb), 0.25);
+  box-shadow: 0 8px 24px rgba(225, 193, 142, 0.28);
 }
 
 .btn-hero:hover {
-  background: #c8ff00;
+  background: linear-gradient(135deg, #f5ecdd 0%, #e1c18e 100%);
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(var(--lime-rgb), 0.4);
+  box-shadow: 0 12px 35px rgba(225, 193, 142, 0.38);
 }
 
 /* Stat bar */
