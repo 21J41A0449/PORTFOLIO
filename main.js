@@ -55,9 +55,9 @@ function initBackgroundCanvas() {
   const positions = new Float32Array(particleCount * 3);
   const colors = new Float32Array(particleCount * 3);
 
-  // Palette: Electric Lime (#AEFF00) and Hot Coral (#FF4D6D)
-  const color1 = new THREE.Color(0xaeff00);
-  const color2 = new THREE.Color(0xff4d6d);
+  // Palette: Wasila Champagne Gold (#e1c18e) and Soft Ivory (#f5ecdd)
+  const color1 = new THREE.Color(0xe1c18e);
+  const color2 = new THREE.Color(0xf5ecdd);
 
   for (let i = 0; i < particleCount * 3; i += 3) {
     positions[i] = (Math.random() - 0.5) * 65;
@@ -133,11 +133,11 @@ function initHeroCanvas() {
   const coreGroup = new THREE.Group();
   scene.add(coreGroup);
 
-  // 1. Inner Luminous Core (Electric Lime / Warm Gold)
+  // 1. Inner Luminous Core (Wasila Champagne Gold)
   const innerGeo = new THREE.SphereGeometry(0.85, 32, 32);
   const innerMat = new THREE.MeshStandardMaterial({
-    color: 0xaeff00,
-    emissive: 0x4f8000,
+    color: 0xe1c18e,
+    emissive: 0x4a3b20,
     emissiveIntensity: 1.1,
     roughness: 0.15,
     metalness: 0.85
@@ -145,15 +145,15 @@ function initHeroCanvas() {
   const innerMesh = new THREE.Mesh(innerGeo, innerMat);
   coreGroup.add(innerMesh);
 
-  // 2. Middle Wireframe Shell (Hot Coral / Gold)
+  // 2. Middle Wireframe Shell (Warm Sand Gold)
   const middleGeo = new THREE.IcosahedronGeometry(1.48, 2);
   const middleMat = new THREE.MeshStandardMaterial({
-    color: 0xff4d6d,
-    emissive: 0x6e0e22,
+    color: 0xd4ae78,
+    emissive: 0x362711,
     emissiveIntensity: 0.6,
     wireframe: true,
     transparent: true,
-    opacity: 0.4
+    opacity: 0.45
   });
   const middleMesh = new THREE.Mesh(middleGeo, middleMat);
   coreGroup.add(middleMesh);
@@ -161,7 +161,7 @@ function initHeroCanvas() {
   // 3. Dual Orbital Rings
   const ring1Geo = new THREE.TorusGeometry(1.95, 0.02, 16, 120);
   const ring1Mat = new THREE.MeshBasicMaterial({
-    color: 0xaeff00,
+    color: 0xe1c18e,
     transparent: true,
     opacity: 0.75,
     side: THREE.DoubleSide
@@ -172,9 +172,9 @@ function initHeroCanvas() {
 
   const ring2Geo = new THREE.TorusGeometry(2.25, 0.018, 16, 120);
   const ring2Mat = new THREE.MeshBasicMaterial({
-    color: 0xffb800,
+    color: 0xf5ecdd,
     transparent: true,
-    opacity: 0.55,
+    opacity: 0.6,
     side: THREE.DoubleSide
   });
   const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
@@ -185,7 +185,7 @@ function initHeroCanvas() {
   const nodeCount = 14;
   const nodesGroup = new THREE.Group();
   const nodeGeo = new THREE.SphereGeometry(0.055, 16, 16);
-  const nodeMat = new THREE.MeshBasicMaterial({ color: 0xf8fcff });
+  const nodeMat = new THREE.MeshBasicMaterial({ color: 0xfdfaf4 });
 
   for (let i = 0; i < nodeCount; i++) {
     const node = new THREE.Mesh(nodeGeo, nodeMat);
@@ -206,11 +206,11 @@ function initHeroCanvas() {
   const ambient = new THREE.AmbientLight(0xffffff, 0.45);
   scene.add(ambient);
 
-  const lightLime = new THREE.PointLight(0xaeff00, 3, 16);
+  const lightLime = new THREE.PointLight(0xe1c18e, 3, 16);
   lightLime.position.set(3.5, 3.5, 3.5);
   scene.add(lightLime);
 
-  const lightCoral = new THREE.PointLight(0xff4d6d, 2.5, 16);
+  const lightCoral = new THREE.PointLight(0xf5ecdd, 2.5, 16);
   lightCoral.position.set(-3.5, -3.5, 3.5);
   scene.add(lightCoral);
 
