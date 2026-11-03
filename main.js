@@ -331,7 +331,7 @@ function initScrollNav() {
 
 // --- 4. 3D CARD TILT & MAGNETIC LIGHT GLOW ---
 function initTiltCards() {
-  const cards = document.querySelectorAll('.svc-card, .tech-card');
+  const cards = document.querySelectorAll('.svc-card, .tech-card, .about-pillar-card');
 
   cards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
