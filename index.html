@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyxel | Autonomous AI Systems Architect & Full-Stack Automation Engineer</title>
+  <meta name="description" content="Production-grade Autonomous AI Workflows, Real-Time Voice Agents, RAG Sales Pipelines, and Multi-Tenant SaaS Platforms that eliminate manual operational overhead 24/7.">
+  
+  <!-- SEO & Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23060A17%22/><circle cx=%2250%22 cy=%2250%22 r=%2232%22 stroke=%22%23AEFF00%22 stroke-width=%228%22 fill=%22none%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%23FF4D6D%22/></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=6.0">
+</head>
+<body>
+
+  <!-- 3D Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-grid"></div>
+  <div class="glow-field"></div>
+
+  <!-- Header & Navigation -->
+  <header id="site-header">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand" id="brand-logo">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="brand-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#AEFF00" />
+              <stop offset="100%" stop-color="#FFB800" />
+            </linearGradient>
+            <linearGradient id="brand-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FF4D6D" />
+              <stop offset="100%" stop-color="#AEFF00" />
+            </linearGradient>
+          </defs>
+          <circle cx="44" cy="50" r="28" stroke="url(#brand-grad-1)" stroke-width="7" stroke-linecap="round" stroke-dasharray="120 50" />
+          <circle cx="56" cy="50" r="28" stroke="url(#brand-grad-2)" stroke-width="7" stroke-linecap="round" stroke-dasharray="120 50" stroke-dashoffset="85" />
+          <circle cx="50" cy="50" r="6" fill="#F8FCFF" />
+        </svg>
+        <span class="brand-name">Nyx<span>el</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active" id="link-hero">Home</a></li>
+        <li><a href="#case-studies" id="link-case-studies">Case Studies</a></li>
+        <li><a href="#architecture" id="link-architecture">Architecture</a></li>
+        <li><a href="#skills-matrix" id="link-skills">Skills Matrix</a></li>
+        <li><a href="#contact" id="link-contact">Hire Me</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:+916281011139" class="nav-phone" id="nav-phone-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+91 62810 11139</span>
+        </a>
+        <a href="#contact" class="btn-cta" id="nav-cta-btn">Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-content reveal" id="hero-content">
+        <div class="hero-badge">
+          <div class="badge-dot"></div>
+          <span class="badge-text">AI Systems Architect &amp; Full-Stack Automation Engineer</span>
+        </div>
+        <h1 class="hero-headline">Autonomous AI Systems &amp; Enterprise Automation</h1>
+        <p class="hero-sub">I design, build, and deploy production-grade <strong>Autonomous AI Workflows, Real-Time Voice Agents, and Multi-Tenant SaaS Platforms</strong> that eliminate manual operational overhead, capture high-intent leads, and automate end-to-end customer lifecycles 24/7 with zero downtime.</p>
+        <div class="hero-actions">
+          <a href="#case-studies" class="btn-hero" id="hero-btn-primary">
+            <span>Explore 7 Production Systems</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#architecture" class="btn-ghost" id="hero-btn-secondary">View Node Architectures</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <span class="metric-val" id="stat-efficiency">7</span>
+            <span class="metric-lbl">Production Systems</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val" id="stat-speed">&lt;800ms</span>
+            <span class="metric-lbl">Voice Telephony Latency</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val" id="stat-availability">24/7</span>
+            <span class="metric-lbl">Mission-Critical Uptime</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-3d reveal" id="hero-3d-box">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-canvas-label">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8l4 4-4 4M8 12h8"></path></svg>
+          <span>Drag to interact with Architecture Core</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Technologies Continuous Marquee -->
+  <div class="tech-pill-bar-section">
+    <div class="tech-pill-track">
+      <span class="tech-pill-item">n8n (Self-Hosted)</span>
+      <span class="tech-pill-item">OpenAI GPT-4o / Realtime</span>
+      <span class="tech-pill-item">Retell Voice AI</span>
+      <span class="tech-pill-item">pgvector Embeddings</span>
+      <span class="tech-pill-item">Supabase (PostgreSQL 15)</span>
+      <span class="tech-pill-item">Row Level Security (RLS)</span>
+      <span class="tech-pill-item">PL/pgSQL Functions &amp; Triggers</span>
+      <span class="tech-pill-item">Twilio WhatsApp &amp; Voice API</span>
+      <span class="tech-pill-item">Meta Embedded Signup v4</span>
+      <span class="tech-pill-item">Next.js (App Router)</span>
+      <span class="tech-pill-item">React 19</span>
+      <span class="tech-pill-item">TanStack Start (SSR)</span>
+      <span class="tech-pill-item">TypeScript</span>
+      <span class="tech-pill-item">Tailwind CSS</span>
+      <span class="tech-pill-item">HubSpot REST API</span>
+      <span class="tech-pill-item">Apify Web Scrapers</span>
+      <span class="tech-pill-item">Slack Webhook Telemetry</span>
+      <!-- Continuous duplication for seamless marquee loop -->
+      <span class="tech-pill-item">n8n (Self-Hosted)</span>
+      <span class="tech-pill-item">OpenAI GPT-4o / Realtime</span>
+      <span class="tech-pill-item">Retell Voice AI</span>
+      <span class="tech-pill-item">pgvector Embeddings</span>
+      <span class="tech-pill-item">Supabase (PostgreSQL 15)</span>
+      <span class="tech-pill-item">Row Level Security (RLS)</span>
+      <span class="tech-pill-item">PL/pgSQL Functions &amp; Triggers</span>
+      <span class="tech-pill-item">Twilio WhatsApp &amp; Voice API</span>
+      <span class="tech-pill-item">Meta Embedded Signup v4</span>
+      <span class="tech-pill-item">Next.js (App Router)</span>
+      <span class="tech-pill-item">React 19</span>
+      <span class="tech-pill-item">TanStack Start (SSR)</span>
+      <span class="tech-pill-item">TypeScript</span>
+      <span class="tech-pill-item">Tailwind CSS</span>
+      <span class="tech-pill-item">HubSpot REST API</span>
+      <span class="tech-pill-item">Apify Web Scrapers</span>
+      <span class="tech-pill-item">Slack Webhook Telemetry</span>
+    </div>
+  </div>
+
+  <!-- Section 2: Case Studies (6 Systems) -->
+  <section id="case-studies" class="services-section">
+    <div class="container">
+      <div class="section-intro reveal" id="services-intro">
+        <span class="label">Section 2 / Production Systems</span>
+        <h2>Enterprise AI Architectures Built &amp; Deployed</h2>
+        <p>Production-grade autonomous agents, real-time voice telephony, and mission-critical automation systems running 24/7 with zero downtime.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- System 1: Medical Receptionist -->
+        <div class="svc-card reveal" id="card-clinic">
+          <div class="project-topbar">
+            <span class="project-tag">System 01 / Healthcare</span>
+            <span class="project-stat-badge">Instant Hold</span>
+          </div>
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M12 14v4M10 16h4"></path></svg>
+          </div>
+          <h3>WhatsApp AI Medical Receptionist</h3>
+          <p class="case-study-tagline">Automates patient triage, clinical booking, and doctor schedule coordination on WhatsApp with zero double bookings.</p>
+
+          <ul class="svc-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>12-minute temporary hold prevents double-bookings during patient choice</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Scopes appointments strictly to doctor specialty catalogs and branches</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Automated 24h &amp; 2h WhatsApp reminders with 1-click receptionist takeover</span>
+            </li>
+          </ul>
+          
+          <div class="tech-stack-list">
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Twilio WhatsApp</span>
+            <span class="tech-tag">GPT-4o</span>
+            <span class="tech-tag">Google Calendar</span>
+          </div>
+        </div>
+
+        <!-- System 2: Salon Concierge -->
+        <div class="svc-card reveal" id="card-salon">
+          <div class="project-topbar">
+            <span class="project-tag">System 02 / Salons &amp; Spas</span>
+            <span class="project-stat-badge">Dynamic Chaining</span>
+          </div>
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+          </div>
+          <h3>Dynamic Multi-Service AI Concierge</h3>
+          <p class="case-study-tagline">Coordinates multi-service beauty treatments, certified stylist rosters, and multi-branch schedules in real time.</p>
+
+          <ul class="svc-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Calculates chained durations dynamically (e.g. Color + Cut + Blowdry)</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Matches branch preference with stylist capability certifications</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Automated 48h patch-test alerts and instant cancellation waitlist refills</span>
+            </li>
+          </ul>
+          
+          <div class="tech-stack-list">
+            <span class="tech-tag">n8n Engine</span>
+            <span class="tech-tag">Twilio API</span>
+            <span class="tech-tag">Meta Signup</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Google Calendar</span>
+          </div>
+        </div>
+
+        <!-- System 3: Voice Telephony -->
+        <div class="svc-card reveal" id="card-telephony">
+          <div class="project-topbar">
+            <span class="project-tag">System 03 / Telephony</span>
+            <span class="project-stat-badge">&lt;800ms Latency</span>
+          </div>
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <h3>Real-Time Inbound Voice Phone Agent</h3>
+          <p class="case-study-tagline">Sub-second conversational voice agent answering inbound phone calls and securing bookings without staff latency.</p>
+
+          <ul class="svc-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Speaks natural Arabic &amp; English with sub-800ms turn-taking speed</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero hallucinations grounded directly in verified clinic service catalogs</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Smart hold &amp; pause listeners with post-call WhatsApp confirmations</span>
+            </li>
+          </ul>
+          
+          <div class="tech-stack-list">
+            <span class="tech-tag">Retell AI</span>
+            <span class="tech-tag">Twilio Voice</span>
+            <span class="tech-tag">OpenAI Realtime</span>
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">Google Calendar</span>
+          </div>
+        </div>
+
+        <!-- System 4: RAG Sales Agent Haya -->
+        <div class="svc-card reveal" id="card-haya">
+          <div class="project-topbar">
+            <span class="project-tag">System 04 / B2B Sales</span>
+            <span class="project-stat-badge">Vector RAG</span>
+          </div>
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+          </div>
+          <h3>Autonomous RAG WhatsApp Sales Agent</h3>
+          <p class="case-study-tagline">Vector-embedded AI sales SDR that qualifies inbound marketing leads, answers technical questions, and books demos.</p>
+
+          <ul class="svc-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Semantic search matching product documentation, pricing, and hardware specs</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Consultative discovery matching packages across Starter, Pro, and Enterprise</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Multi-day conversation memory with instant Slack deal alerts &amp; takeover</span>
+            </li>
+          </ul>
+          
+          <div class="tech-stack-list">
+            <span class="tech-tag">pgvector</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">text-embedding-3</span>
+            <span class="tech-tag">Twilio API</span>
+            <span class="tech-tag">Slack</span>
+          </div>
+        </div>
+
+        <!-- System 5: Lead Gen & Scraping -->
+        <div class="svc-card reveal" id="card-leadgen">
+          <div class="project-topbar">
+            <span class="project-tag">System 05 / Lead Generation</span>
+            <span class="project-stat-badge">Auto Pipeline</span>
+          </div>
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>B2B Outbound Lead Engine &amp; Scraper</h3>
+          <p class="case-study-tagline">Automated prospecting engine that finds, enriches, validates, scores, and contacts high-value prospective businesses.</p>
+
+          <ul class="svc-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Crawls Google Maps &amp; reviews for dental clinics, wellness, and salons</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Sentiment review miner detects clinics with complaints about missed calls</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Filters dead landlines, syncs HubSpot CRM, and pushes daily Slack top 5</span>
+            </li>
+          </ul>
+          
+          <div class="tech-stack-list">
+            <span class="tech-tag">Apify</span>
+            <span class="tech-tag">Google Maps API</span>
+            <span class="tech-tag">n8n</span>
+            <span class="tech-tag">HubSpot REST</span>
+            <span class="tech-tag">Slack</span>
+          </div>
+        </div>
+
+        <!-- System 6: Multi-Tenant SaaS Platform -->
+        <div class="svc-card reveal" id="card-saas">
+          <div class="project-topbar">
+            <span class="project-tag">System 06 / Full-Stack SaaS</span>
+            <span class="project-stat-badge">Decoupled Dual-DB</span>
+          </div>
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <h3>Multi-Tenant SaaS Management Platform</h3>
+          <p class="case-study-tagline">Full-stack executive portal with physical database decoupling, interactive trial sandboxes, and dense booking calendar.</p>
+
+          <ul class="svc-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Strict physical decoupling between Core Tenant DB and Outbound Leads CRM</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Interactive 14-day WhatsApp trial sandbox with dynamic QR code testing</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Fresha-grade visual schedule calendar with real-time staff filtering</span>
+            </li>
+          </ul>
+          
+          <div class="tech-stack-list">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React 19</span>
+            <span class="tech-tag">TanStack Start</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Supabase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Interactive Architecture Explorer -->
+  <section id="architecture" class="arch-explorer-section">
+    <div class="container">
+      <div class="section-intro reveal" id="arch-intro">
+        <span class="label">Architecture Deep Dives</span>
+        <h2>Mission-Critical Technical Specifications</h2>
+        <p>Inspect the transactional concurrency locks, vector indices, real-time telephony streaming, and database decoupling protocols powering these systems.</p>
+      </div>
+
+      <!-- Workflow Switcher Tabs -->
+      <div class="workflow-tabs reveal">
+        <button class="workflow-tab-btn active" data-target="panel-clinic">
+          <div class="tab-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <div class="tab-btn-text">
+            <strong>Clinic WhatsApp AI</strong>
+            <small>Atomic Concurrency Engine</small>
+          </div>
+        </button>
+
+        <button class="workflow-tab-btn" data-target="panel-salon">
+          <div class="tab-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line></svg>
+          </div>
+          <div class="tab-btn-text">
+            <strong>Salon Concierge</strong>
+            <small>Chained Duration Engine</small>
+          </div>
+        </button>
+
+        <button class="workflow-tab-btn" data-target="panel-voice">
+          <div class="tab-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="tab-btn-text">
+            <strong>Voice Telephony AI</strong>
+            <small>Retell &lt;800ms Streaming</small>
+          </div>
+        </button>
+
+        <button class="workflow-tab-btn" data-target="panel-haya">
+          <div class="tab-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+          </div>
+          <div class="tab-btn-text">
+            <strong>RAG SDR "Haya"</strong>
+            <small>pgvector Cosine Search</small>
+          </div>
+        </button>
+
+        <button class="workflow-tab-btn" data-target="panel-outbound">
+          <div class="tab-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div class="tab-btn-text">
+            <strong>B2B Outbound Engine</strong>
+            <small>Apify &amp; Sentiment Scraper</small>
+          </div>
+        </button>
+
+        <button class="workflow-tab-btn" data-target="panel-saas">
+          <div class="tab-btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <div class="tab-btn-text">
+            <strong>Multi-Tenant SaaS</strong>
+            <small>Dual-DB Isolation</small>
+          </div>
+        </button>
+      </div>
+
+      <!-- Detail Panels -->
+      <div class="arch-card-wrap reveal">
+        <!-- Panel 1: Medical Receptionist Architecture -->
+        <div class="workflow-panel active" id="panel-clinic">
+          <div class="panel-header">
+            <div>
+              <h3>Autonomous WhatsApp AI Medical Receptionist Architecture</h3>
+              <p>Eliminates race conditions with atomic slot hold protocols and seamless 2-way Google Calendar synchronization.</p>
+            </div>
+            <div class="panel-badges">
+              <span class="badge-tag highlight">12-Minute Temporary Hold</span>
+              <span class="badge-tag">Zero-Regex LLM Intent</span>
+              <span class="badge-tag">1-Click Live Takeover</span>
+            </div>
+          </div>
+
+          <div class="n8n-canvas-frame">
+            <span class="n8n-canvas-label">n8n &amp; PostgreSQL Concurrency Pipeline</span>
+            <div class="n8n-node-chain">
+              <div class="n8n-node-card">
+                <span class="node-type-pill trigger">TRIGGER</span>
+                <span class="node-card-title">Twilio WhatsApp</span>
+                <span class="node-card-detail">Webhook Payload Ingest</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill transform">GATE</span>
+                <span class="node-card-title">Pause Check</span>
+                <span class="node-card-detail">Staff Override Switch</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill ai">AI AGENT</span>
+                <span class="node-card-title">Triage &amp; Specialty</span>
+                <span class="node-card-detail">Doctor Catalog Scoping</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">DATABASE</span>
+                <span class="node-card-title">Hold Slot</span>
+                <span class="node-card-detail">12-Min Temporary Hold</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill output">OUTPUT</span>
+                <span class="node-card-title">Confirm Booking</span>
+                <span class="node-card-detail">2-Step WhatsApp Alerts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-specs-grid">
+            <div class="spec-block">
+              <span class="spec-label">Concurrency Control</span>
+              <h4>Atomic Slot Locking</h4>
+              <p>When a patient is reviewing a proposed time, the system writes an expiring hold timestamp into the database, blocking other inbound patients from claiming that exact doctor window.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Doctor Scoping</span>
+              <h4>Specialty Grounding</h4>
+              <p>Appointments are strictly scoped to verified doctor catalogs per clinic branch. The LLM cannot book a pediatric patient with an orthopedic surgeon or book outside branch operating hours.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Automated Reminders</span>
+              <h4>24h / 2h Interactive Alerts</h4>
+              <p>Cron queues trigger personalized reminder messages with interactive WhatsApp buttons (Confirm / Reschedule / Cancel). Confirmations immediately update calendar status flags.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Human Takeover</span>
+              <h4>1-Click Live Takeover</h4>
+              <p>Doctors or medical receptionists can toggle the chat pause switch in the web dashboard, immediately suspending the AI and preventing conflicting simultaneous automated responses.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Salon Concierge Architecture -->
+        <div class="workflow-panel" id="panel-salon">
+          <div class="panel-header">
+            <div>
+              <h3>Dynamic Multi-Service AI Concierge Architecture</h3>
+              <p>Calculates chained durations (e.g., Balayage + Cut + Styling), enforces patch-test safety alerts 48h prior, and manages priority cancellation waitlists.</p>
+            </div>
+            <div class="panel-badges">
+              <span class="badge-tag highlight">Multi-Service Chaining</span>
+              <span class="badge-tag">Patch Test Safety 48h</span>
+              <span class="badge-tag">Instant Waitlist Refill</span>
+            </div>
+          </div>
+
+          <div class="n8n-canvas-frame">
+            <span class="n8n-canvas-label">Chained Service Scheduling Pipeline</span>
+            <div class="n8n-node-chain">
+              <div class="n8n-node-card">
+                <span class="node-type-pill trigger">TRIGGER</span>
+                <span class="node-card-title">Meta Inbound</span>
+                <span class="node-card-detail">Twilio Senders API v2</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill transform">CODE</span>
+                <span class="node-card-title">Duration Summer</span>
+                <span class="node-card-detail">Total Block Computation</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">FILTER</span>
+                <span class="node-card-title">Stylist Certification</span>
+                <span class="node-card-detail">Branch &amp; Skill Resolver</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">WAITLIST</span>
+                <span class="node-card-title">Priority Queue</span>
+                <span class="node-card-detail">Auto-Refill on Cancel</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill output">OUTPUT</span>
+                <span class="node-card-title">Patch Test Alert</span>
+                <span class="node-card-detail">48h Chemical Warning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-specs-grid">
+            <div class="spec-block">
+              <span class="spec-label">Duration Chaining</span>
+              <h4>Summed Service Blocks</h4>
+              <p>Unlike single-service schedulers, this system dynamically chains appointment duration requirements and verifies contiguous blocks across Google Calendar and stylist rosters.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Safety Compliance</span>
+              <h4>Automated Patch Test Protocol</h4>
+              <p>First-time clients booking bleach, tints, or chemical straightening receive an automated regulatory safety prompt requiring a clinic/salon patch test 48 hours prior.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Waitlist Optimization</span>
+              <h4>Instant Cancellation Fill</h4>
+              <p>When an appointment is cancelled, n8n instantly queries the priority waitlist table and sends an automated WhatsApp offer to the next client in line, filling slots within minutes.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Retention Cron</span>
+              <h4>6–10 Week Re-engagement</h4>
+              <p>Automated background jobs calculate days since last haircut or color, generating personalized WhatsApp re-booking reminders that maintain client recurring lifetime value.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Voice Telephony Architecture -->
+        <div class="workflow-panel" id="panel-voice">
+          <div class="panel-header">
+            <div>
+              <h3>Real-Time Inbound Voice AI Phone Receptionist</h3>
+              <p>Sub-second streaming telephony built with Retell AI &amp; Twilio Voice webhooks. Converses natively in Arabic and English with zero catalog hallucinations.</p>
+            </div>
+            <div class="panel-badges">
+              <span class="badge-tag highlight">&lt;800ms End-to-End Latency</span>
+              <span class="badge-tag">Bilingual Arabic &amp; English</span>
+              <span class="badge-tag">Smart Hold &amp; Pause Detection</span>
+            </div>
+          </div>
+
+          <div class="n8n-canvas-frame">
+            <span class="n8n-canvas-label">Voice Telephony Function Calling Topology</span>
+            <div class="n8n-node-chain">
+              <div class="n8n-node-card">
+                <span class="node-type-pill trigger">TELEPHONY</span>
+                <span class="node-card-title">Inbound Twilio Call</span>
+                <span class="node-card-detail">SIP Trunk to Retell AI</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill transform">IDENTITY</span>
+                <span class="node-card-title">Caller ID Resolver</span>
+                <span class="node-card-detail">Greets By Name &amp; History</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill ai">VOICE LLM</span>
+                <span class="node-card-title">GPT-4o Realtime</span>
+                <span class="node-card-detail">Arabic &amp; English Speech</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">CATALOG</span>
+                <span class="node-card-title">Catalog Verification</span>
+                <span class="node-card-detail">Zero-Hallucination Scope</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill output">POST-CALL</span>
+                <span class="node-card-title">WhatsApp Dispatch</span>
+                <span class="node-card-detail">Directions &amp; Details</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-specs-grid">
+            <div class="spec-block">
+              <span class="spec-label">Sub-Second Streaming</span>
+              <h4>Low Latency Voice Agent</h4>
+              <p>Retell AI voice engine coupled with OpenAI Realtime delivers natural turn-taking with sub-800ms response times, preventing awkward conversational overlaps.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Database Grounding</span>
+              <h4>Zero-Hallucination Grounding</h4>
+              <p>Guarantees zero hallucinations. Doctor rosters, treatment pricing, and available hours are pulled strictly from verified clinic database catalogs during live speech.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Conversational Nuance</span>
+              <h4>Smart Hold &amp; Pause Detection</h4>
+              <p>Understands natural filler phrases like "Wait a second", "لحظة", or "خلك معاي" when callers check their calendars, patiently holding without cutting off the caller.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Multi-Modal Handoff</span>
+              <h4>Post-Call WhatsApp Handoff</h4>
+              <p>The second the call concludes, n8n sends a WhatsApp message with the booked appointment summary, calendar ICS file, and Google Maps pin for branch arrival.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: RAG Sales Rep Haya Architecture -->
+        <div class="workflow-panel" id="panel-haya">
+          <div class="panel-header">
+            <div>
+              <h3>Autonomous RAG WhatsApp Sales Representative ("Haya")</h3>
+              <p>Vector-embedded sales pipeline that performs semantic document retrieval via pgvector, qualifies leads, and schedules executive demos.</p>
+            </div>
+            <div class="panel-badges">
+              <span class="badge-tag highlight">pgvector Top-K Search</span>
+              <span class="badge-tag">Multi-Day Context Memory</span>
+              <span class="badge-tag">Slack Sales Takeover</span>
+            </div>
+          </div>
+
+          <div class="n8n-canvas-frame">
+            <span class="n8n-canvas-label">RAG Semantic Retrieval &amp; CRM Pipeline</span>
+            <div class="n8n-node-chain">
+              <div class="n8n-node-card">
+                <span class="node-type-pill trigger">INBOUND</span>
+                <span class="node-card-title">WhatsApp Lead</span>
+                <span class="node-card-detail">Prospect Query Ingest</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill transform">EMBEDDING</span>
+                <span class="node-card-title">text-embedding-3</span>
+                <span class="node-card-detail">1536-Dim Vector Gen</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">VECTOR DB</span>
+                <span class="node-card-title">pgvector Cosine</span>
+                <span class="node-card-detail">Product &amp; Pricing Docs</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill ai">AI AGENT</span>
+                <span class="node-card-title">Consultative SDR</span>
+                <span class="node-card-detail">Tier Recommender</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill output">ALERT</span>
+                <span class="node-card-title">Slack &amp; Demo Sync</span>
+                <span class="node-card-detail">Executive Slot Booking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-specs-grid">
+            <div class="spec-block">
+              <span class="spec-label">Semantic Search</span>
+              <h4>pgvector Cosine Similarity</h4>
+              <p>Product docs, tier matrices, and hardware specs are chunked and indexed into Supabase pgvector. Top-k cosine search feeds accurate contextual chunks to the agent.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Sales Engineering</span>
+              <h4>Consultative Discovery</h4>
+              <p>Haya actively discovers prospect branch count, staff size, and software pain points, autonomously matching and defending the recommended plan tier.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">State Management</span>
+              <h4>Multi-Day Context Memory</h4>
+              <p>Maintains conversation context across multiple days, ensuring prospects returning 48 hours later pick up seamlessly right where they left off.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">CRM Integration</span>
+              <h4>Live CRM &amp; Slack Alerts</h4>
+              <p>Updates deal qualification stages directly in the CRM and sends instant alerts to executive sales channels on Slack with concise deal summaries.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5: B2B Outbound Engine Architecture -->
+        <div class="workflow-panel" id="panel-outbound">
+          <div class="panel-header">
+            <div>
+              <h3>B2B Outbound Lead Generation &amp; Scraping Engine</h3>
+              <p>Automated pipeline finding, enriching, scoring, and contacting prospective clinics &amp; salons using Apify, review sentiment mining, and WhatsApp deliverability filters.</p>
+            </div>
+            <div class="panel-badges">
+              <span class="badge-tag highlight">Apify Maps Scraper</span>
+              <span class="badge-tag">Sentiment Review Mining</span>
+              <span class="badge-tag">Daily Top 5 Slack Digest</span>
+            </div>
+          </div>
+
+          <div class="n8n-canvas-frame">
+            <span class="n8n-canvas-label">Outbound Prospecting &amp; Enrichment Pipeline</span>
+            <div class="n8n-node-chain">
+              <div class="n8n-node-card">
+                <span class="node-type-pill trigger">CRON</span>
+                <span class="node-card-title">Daily Scheduler</span>
+                <span class="node-card-detail">Target Metro Areas</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill transform">APIFY</span>
+                <span class="node-card-title">Maps &amp; Reviews</span>
+                <span class="node-card-detail">Metadata Extraction</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill ai">SENTIMENT AI</span>
+                <span class="node-card-title">Review Miner</span>
+                <span class="node-card-detail">Flags Slow Phone Replies</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">VALIDATOR</span>
+                <span class="node-card-title">WhatsApp Filter</span>
+                <span class="node-card-detail">Filters Dead Landlines</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill output">CRM &amp; SLACK</span>
+                <span class="node-card-title">HubSpot Sync</span>
+                <span class="node-card-detail">Daily Top 5 Digest Bot</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-specs-grid">
+            <div class="spec-block">
+              <span class="spec-label">Automated Ingestion</span>
+              <h4>Apify &amp; Maps Scraping</h4>
+              <p>Systematically crawls targeted geographic clusters for dental clinics, wellness centers, and luxury salons, capturing verified operational metadata.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">High-Intent Signal</span>
+              <h4>Unresponsive Clinic Detector</h4>
+              <p>Runs sentiment models over Google Review corpuses to identify clinics with complaints about unanswered phone lines—pinpointing clients with immediate ROI potential.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Deliverability Protection</span>
+              <h4>WhatsApp Viability Verification</h4>
+              <p>Automatically weeds out inactive landlines and validates mobile WhatsApp connectivity prior to dispatching outreach, protecting sender score and API quotas.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Sales Operations</span>
+              <h4>HubSpot REST &amp; Slack Digest</h4>
+              <p>Deduplicates contacts against existing CRM records and delivers an executive summary of the top 5 highest-scoring opportunities directly to Slack every morning.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 6: Multi-Tenant SaaS Platform Architecture -->
+        <div class="workflow-panel" id="panel-saas">
+          <div class="panel-header">
+            <div>
+              <h3>Multi-Tenant SaaS Platform &amp; Executive Dashboard</h3>
+              <p>Engineered with strict physical database decoupling, interactive 14-day WhatsApp sandboxes, high-density booking calendars, and synthetic test suites.</p>
+            </div>
+            <div class="panel-badges">
+              <span class="badge-tag highlight">Decoupled Dual-DB Isolation</span>
+              <span class="badge-tag">Next.js &amp; React 19 (SSR)</span>
+              <span class="badge-tag">Synthetic Health Harness</span>
+            </div>
+          </div>
+
+          <div class="n8n-canvas-frame">
+            <span class="n8n-canvas-label">Multi-Tenant Full-Stack Architecture</span>
+            <div class="n8n-node-chain">
+              <div class="n8n-node-card">
+                <span class="node-type-pill trigger">FRONTEND</span>
+                <span class="node-card-title">Next.js / React 19</span>
+                <span class="node-card-detail">TanStack Start &amp; Query</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">DB 1</span>
+                <span class="node-card-title">Tenant Operations</span>
+                <span class="node-card-detail">Core Operations Data</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill router">DB 2</span>
+                <span class="node-card-title">Sales Leads CRM</span>
+                <span class="node-card-detail">Sales &amp; Prospect Data</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill transform">SANDBOX</span>
+                <span class="node-card-title">14-Day QR Trial</span>
+                <span class="node-card-detail">Dynamic Tester Router</span>
+              </div>
+              <div class="n8n-connector-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+              <div class="n8n-node-card">
+                <span class="node-type-pill output">CALENDAR</span>
+                <span class="node-card-title">Dense Grid UI</span>
+                <span class="node-card-detail">Day / Week / Month Views</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-specs-grid">
+            <div class="spec-block">
+              <span class="spec-label">Security &amp; Compliance</span>
+              <h4>Dual-Database Decoupling</h4>
+              <p>Strict physical separation between the Core Tenant Operations Database and the Outbound Sales Leads Database, preventing data bleed and guaranteeing tenant security.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Self-Service Onboarding</span>
+              <h4>Interactive 14-Day Sandbox</h4>
+              <p>Prospective customers sign up and instantly test their tailored WhatsApp bot using dynamic QR codes connected to their designated tester phone number.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">High-Density Calendar</span>
+              <h4>Visual Booking Calendar</h4>
+              <p>Fresha-inspired visual schedule grid supporting Day/Week/Month views, staff resource filters, color status palettes, and real-time appointment inspection.</p>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Automated Verification</span>
+              <h4>Synthetic Health Harness</h4>
+              <p>Automated synthetic test suites verify 100% of tenant provisioning, sample data seeding, trigger cascades, and webhook reliability every single hour.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Section 3: Summary of Technical Skills Demonstrated Table -->
+  <section id="skills-matrix" class="tech-matrix-section">
+    <div class="container">
+      <div class="section-intro reveal" id="skills-intro">
+        <span class="label">Competencies Matrix</span>
+        <h2>Summary of Technical Skills Demonstrated</h2>
+        <p>A breakdown of the engineering methodologies, frameworks, databases, and protocols across all production systems.</p>
+      </div>
+
+      <div class="skills-table-wrap reveal">
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Technologies &amp; Competencies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cat-col"><span>AI &amp; LLM Orchestration</span></td>
+              <td>OpenAI GPT-4o, Google Gemini, Retell Voice AI, pgvector embeddings, Prompt Engineering, Zero-Hallucination Grounding, Dynamic Function Calling</td>
+            </tr>
+            <tr>
+              <td class="cat-col"><span>Workflow Automation</span></td>
+              <td>Self-Hosted n8n, Webhook Ingress, Advanced Code Nodes (JavaScript/Node.js), Multi-Turn State Machines, DLQ Auto-Retry Workers</td>
+            </tr>
+            <tr>
+              <td class="cat-col"><span>Backend &amp; Databases</span></td>
+              <td>Supabase, PostgreSQL 15, Row Level Security (RLS), Database Stored Procedures &amp; Triggers, Atomic Concurrency Locks &amp; Real-Time Hold Verification</td>
+            </tr>
+            <tr>
+              <td class="cat-col"><span>Telephony &amp; Messaging</span></td>
+              <td>Twilio WhatsApp Business API, Twilio Tech Provider Senders v2, Meta Embedded Signup v4, Twilio Voice Telephony, WhatsApp Interactive Templates</td>
+            </tr>
+            <tr>
+              <td class="cat-col"><span>Frontend &amp; SaaS</span></td>
+              <td>Next.js (App Router / SSR), React 19, TanStack Start (SSR), TypeScript, TanStack Router, TanStack Query, Tailwind CSS, Vite</td>
+            </tr>
+            <tr>
+              <td class="cat-col"><span>Integrations &amp; Scraping</span></td>
+              <td>Google Calendar API, Google Maps API, Meta Graph API, HubSpot CRM, Apify Web Scrapers, Slack Webhooks</td>
+            </tr>
+            <tr>
+              <td class="cat-col"><span>DevOps &amp; Monitoring</span></td>
+              <td>Dual-DB Decoupled Architecture, Dead Man's Switch, Self-Healing Sentinel Watchdogs, Synthetic Testing Harnesses, Automated Database Backups</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Contact / Hire Me Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-meta reveal" id="contact-meta">
+          <span class="label">Initiate Contact</span>
+          <h2>Architect Your Autonomous AI Infrastructure</h2>
+          <p>Available for specialized engineering contracts: medical receptionists, real-time voice telephony agents, B2B RAG sales pipelines, and custom multi-tenant SaaS platforms.</p>
+          
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-item-body">
+                <label>Direct Phone / WhatsApp</label>
+                <a href="tel:+916281011139">+91 62810 11139</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-item-body">
+                <label>Direct Email</label>
+                <a href="mailto:hafsiya29@gmail.com">hafsiya29@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-item-body">
+                <label>Location &amp; Availability</label>
+                <p>Hyderabad, India (Remote Global)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal" id="contact-form-card">
+          <form id="contact-form">
+            <div class="form-grid">
+              <div class="field">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" name="name" required placeholder="Alex Mercer">
+              </div>
+              <div class="field">
+                <label for="form-email">Work Email</label>
+                <input type="email" id="form-email" name="email" required placeholder="alex@company.com">
+              </div>
+              <div class="field">
+                <label for="form-phone">Phone / WhatsApp</label>
+                <input type="tel" id="form-phone" name="phone" placeholder="+91 98765 43210">
+              </div>
+              <div class="field">
+                <label for="form-pipeline">Target System / Architecture</label>
+                <select id="form-pipeline" name="pipeline">
+                  <option value="clinic">WhatsApp AI Medical Receptionist (Clinics)</option>
+                  <option value="salon">Dynamic Multi-Service AI Concierge (Luxury Salons &amp; Spas)</option>
+                  <option value="voice">Real-Time Inbound Voice Phone Receptionist</option>
+                  <option value="haya">Autonomous RAG WhatsApp Sales Agent ("Haya")</option>
+                  <option value="outbound">B2B Outbound Lead Generation &amp; Scraping Engine</option>
+                  <option value="saas">Multi-Tenant SaaS Platform &amp; Executive Dashboard</option>
+                  <option value="custom">Custom Enterprise Architecture</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="form-message">System Scope &amp; Tech Requirements</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Detail your transaction volume, existing EHR/CRM integrations, latency targets, and timeline..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn-submit" id="btn-submit">
+              <span>Send Architecture Inquiry</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Skills & Tech Pill Bar -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#hero" class="brand">
+            <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="brand-grad-f1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#AEFF00" />
+                  <stop offset="100%" stop-color="#FFB800" />
+                </linearGradient>
+                <linearGradient id="brand-grad-f2" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#FF4D6D" />
+                  <stop offset="100%" stop-color="#AEFF00" />
+                </linearGradient>
+              </defs>
+              <circle cx="44" cy="50" r="28" stroke="url(#brand-grad-f1)" stroke-width="7" stroke-linecap="round" stroke-dasharray="120 50" />
+              <circle cx="56" cy="50" r="28" stroke="url(#brand-grad-f2)" stroke-width="7" stroke-linecap="round" stroke-dasharray="120 50" stroke-dashoffset="85" />
+              <circle cx="50" cy="50" r="6" fill="#F8FCFF" />
+            </svg>
+            <span class="brand-name">Nyx<span>el</span></span>
+          </a>
+          <p>Architecting production-grade AI systems, sub-second telephony agents, and multi-tenant SaaS dashboards that run 24/7 with zero downtime.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Production Systems</h4>
+          <ul>
+            <li><a href="#case-studies">WhatsApp Medical Receptionist</a></li>
+            <li><a href="#case-studies">Salon AI Concierge</a></li>
+            <li><a href="#case-studies">Real-Time Voice Telephony</a></li>
+            <li><a href="#case-studies">RAG Sales SDR ("Haya")</a></li>
+            <li><a href="#case-studies">Multi-Tenant SaaS Platform</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Inquiries</h4>
+          <ul>
+            <li><a href="tel:+916281011139">+91 62810 11139</a></li>
+            <li><a href="mailto:hafsiya29@gmail.com">hafsiya29@gmail.com</a></li>
+            <li><a href="#contact">Schedule Architecture Call</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nyxel Technologies | Autonomous AI Systems Architect &amp; Full-Stack Automation Engineer. All rights reserved.</p>
+        <div class="social-row">
+          <a href="#" class="soc" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+          </a>
+          <a href="#" class="soc" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" class="soc" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Module -->
+  <script type="module" src="main.js?v=6.0"></script>
+</body>
+</html>
