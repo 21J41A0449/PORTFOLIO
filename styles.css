@@ -135,27 +135,14 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 800; line-hei
 }
 
 /* ============================================================
-   FIXED CANVAS BACKGROUNDS
+   CLEAN BACKGROUND SYSTEM (NO NOISY DOTS)
    ============================================================ */
 #bg-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  pointer-events: none;
+  display: none;
 }
 
-/* Deep noise/grid overlay */
 .bg-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(225, 193, 142, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(225, 193, 142, 0.03) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(ellipse 70% 70% at 50% 0%, #000 0%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 0%, #000 0%, transparent 100%);
+  display: none;
 }
 
 /* Atmospheric light bleeds */
@@ -823,15 +810,15 @@ section + section { padding-top: 0; }
 }
 
 .problem-callout {
-  background: rgba(255, 77, 109, 0.07);
-  border-left: 3px solid var(--coral);
+  background: rgba(225, 193, 142, 0.08);
+  border-left: 3px solid var(--lime);
   padding: 0.85rem 1.1rem;
   border-radius: 0 8px 8px 0;
   margin: 0.4rem 0;
 }
 
 .problem-callout strong {
-  color: var(--coral);
+  color: var(--lime);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1136,17 +1123,16 @@ section + section { padding-top: 0; }
   color: var(--lime);
 }
 
-/* n8n Node Topology Visualizer */
+/* n8n Node Topology Visualizer (Wasila Theme) */
 .n8n-canvas-frame {
-  background: rgba(6, 10, 23, 0.75);
-  border: 1px solid var(--stroke-hi);
+  background: #191824;
+  border: 1px solid rgba(225, 193, 142, 0.16);
   border-radius: var(--radius-md);
-  padding: 2rem;
+  padding: 2.2rem 2rem;
   margin-bottom: 2.5rem;
   position: relative;
   overflow-x: auto;
-  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .n8n-canvas-label {
@@ -1182,10 +1168,10 @@ section + section { padding-top: 0; }
 }
 
 .n8n-node-card {
-  background: rgba(15, 26, 56, 0.95);
-  border: 1px solid var(--stroke-hi);
+  background: #201e2e;
+  border: 1px solid rgba(225, 193, 142, 0.18);
   border-radius: 12px;
-  padding: 1.1rem;
+  padding: 1.15rem;
   width: 175px;
   flex-shrink: 0;
   display: flex;
@@ -1193,13 +1179,13 @@ section + section { padding-top: 0; }
   gap: 0.55rem;
   position: relative;
   transition: all var(--dur-mid) var(--ease-out);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .n8n-node-card:hover {
   border-color: var(--lime);
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 20px rgba(var(--lime-rgb), 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(var(--lime-rgb), 0.18);
 }
 
 .node-type-pill {
@@ -1207,17 +1193,18 @@ section + section { padding-top: 0; }
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
+  padding: 0.22rem 0.55rem;
   border-radius: 4px;
   align-self: flex-start;
+  border: 1px solid transparent;
 }
 
-.node-type-pill.trigger   { background: rgba(var(--lime-rgb), 0.15); color: var(--lime); }
-.node-type-pill.transform { background: rgba(0, 184, 255, 0.15); color: #00b8ff; }
-.node-type-pill.ai        { background: rgba(255, 77, 109, 0.18); color: var(--coral); }
-.node-type-pill.router    { background: rgba(255, 184, 0, 0.15); color: var(--gold); }
-.node-type-pill.output    { background: rgba(var(--lime-rgb), 0.2); color: var(--lime); }
-.node-type-pill.failover  { background: rgba(255, 77, 109, 0.2); color: #ff6b8b; }
+.node-type-pill.trigger   { background: rgba(225, 193, 142, 0.14); color: #e1c18e; border-color: rgba(225, 193, 142, 0.28); }
+.node-type-pill.transform { background: rgba(212, 174, 120, 0.14); color: #d4ae78; border-color: rgba(212, 174, 120, 0.28); }
+.node-type-pill.ai        { background: rgba(245, 236, 221, 0.12); color: #f5ecdd; border-color: rgba(245, 236, 221, 0.28); }
+.node-type-pill.router    { background: rgba(225, 193, 142, 0.16); color: #e1c18e; border-color: rgba(225, 193, 142, 0.32); }
+.node-type-pill.output    { background: rgba(253, 250, 244, 0.12); color: #fdfaf4; border-color: rgba(253, 250, 244, 0.25); }
+.node-type-pill.failover  { background: rgba(212, 174, 120, 0.16); color: #d4ae78; border-color: rgba(212, 174, 120, 0.30); }
 
 .node-card-title {
   font-size: 0.85rem;
@@ -1238,7 +1225,7 @@ section + section { padding-top: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.7;
+  opacity: 0.8;
   flex-shrink: 0;
 }
 
@@ -1250,7 +1237,7 @@ section + section { padding-top: 0; }
 }
 
 .spec-block {
-  background: rgba(6, 10, 23, 0.4);
+  background: #1c1b27;
   border: 1px solid var(--stroke);
   border-radius: var(--radius-sm);
   padding: 1.4rem;
@@ -1262,7 +1249,7 @@ section + section { padding-top: 0; }
 
 .spec-block:hover {
   border-color: var(--stroke-hi);
-  background: rgba(6, 10, 23, 0.6);
+  background: #222030;
 }
 
 .spec-label {

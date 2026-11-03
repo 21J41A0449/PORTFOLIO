@@ -9,7 +9,6 @@ const state = {
 
 // --- LIFECYCLE INITIALIZATION ---
 function bootstrap() {
-  initBackgroundCanvas();
   initHeroCanvas();
   initScrollNav();
   initTiltCards();
