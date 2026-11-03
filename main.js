@@ -440,24 +440,35 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  const feedback = document.getElementById('form-feedback');
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = document.getElementById('btn-submit');
     const span = btn ? btn.querySelector('span') : null;
-    const originalText = span ? span.textContent : 'Send Project Inquiry';
+    const originalText = span ? span.textContent : 'Send Architecture Inquiry';
 
     if (btn) {
       btn.disabled = true;
       if (span) span.textContent = 'Transmitting Inquiry...';
     }
 
+    if (feedback) {
+      feedback.classList.remove('success');
+    }
+
     setTimeout(() => {
-      alert('Thank you! Your n8n project inquiry has been securely sent. I will review your requirements and get back to you within 24 hours at hafsiya29@gmail.com.');
       form.reset();
       if (btn) {
         btn.disabled = false;
         if (span) span.textContent = originalText;
       }
-    }, 1200);
+      if (feedback) {
+        feedback.classList.add('success');
+        feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        alert('Thank you! Your architecture inquiry has been received. Mohammad Tahaseen will review your requirements and respond within 24 hours at hafsiya29@gmail.com.');
+      }
+    }, 900);
   });
 }
