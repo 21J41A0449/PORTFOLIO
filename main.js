@@ -132,14 +132,17 @@ function initHeroCanvas() {
   const coreGroup = new THREE.Group();
   scene.add(coreGroup);
 
-  // 1. Inner Luminous Core (Wasila Radiant Pearl & Champagne Gold Glow)
-  const innerGeo = new THREE.SphereGeometry(0.85, 48, 48);
-  const innerMat = new THREE.MeshStandardMaterial({
-    color: 0xfdfaf4,
-    emissive: 0xe1c18e,
-    emissiveIntensity: 0.55,
-    roughness: 0.18,
-    metalness: 0.25
+  // 1. Inner Luminous Core (Deep Polished Obsidian Glass with Champagne Gold Specular)
+  const innerGeo = new THREE.SphereGeometry(0.85, 64, 64);
+  const innerMat = new THREE.MeshPhysicalMaterial({
+    color: 0x15141d,
+    emissive: 0x1e1c2a,
+    emissiveIntensity: 0.25,
+    roughness: 0.1,
+    metalness: 0.88,
+    clearcoat: 1.0,
+    clearcoatRoughness: 0.08,
+    reflectivity: 0.95
   });
   const innerMesh = new THREE.Mesh(innerGeo, innerMat);
   coreGroup.add(innerMesh);
