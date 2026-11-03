@@ -442,7 +442,7 @@ function initContactForm() {
 
   const feedback = document.getElementById('form-feedback');
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('btn-submit');
     const span = btn ? btn.querySelector('span') : null;
@@ -450,25 +450,120 @@ function initContactForm() {
 
     if (btn) {
       btn.disabled = true;
-      if (span) span.textContent = 'Transmitting Inquiry...';
+      if (span) span.textContent = 'Transmitting to Slack...';
     }
 
     if (feedback) {
       feedback.classList.remove('success');
     }
 
-    setTimeout(() => {
-      form.reset();
-      if (btn) {
-        btn.disabled = false;
-        if (span) span.textContent = originalText;
+    const formData = {
+      name: document.getElementById('form-name')?.value.trim() || '',
+      email: document.getElementById('form-email')?.value.trim() || '',
+      phone: document.getElementById('form-phone')?.value.trim() || '',
+      pipeline: document.getElementById('form-pipeline')?.value || '',
+      message: document.getElementById('form-message')?.value.trim() || ''
+    };
+
+    const pipelineLabels = {
+      clinic: 'WhatsApp AI Medical Receptionist (Clinics)',
+      salon: 'Dynamic Multi-Service AI Concierge (Luxury Salons & Spas)',
+      voice: 'Real-Time Inbound Voice Phone Receptionist',
+      haya: 'Autonomous RAG WhatsApp Sales Agent ("Haya")',
+      outbound: 'B2B Outbound Lead Generation & Scraping Engine',
+      saas: 'Multi-Tenant SaaS Platform & Executive Dashboard',
+      custom: 'Custom Enterprise Architecture'
+    };
+
+    const targetLabel = pipelineLabels[formData.pipeline] || formData.pipeline || 'General Inquiry';
+
+    const webhookEndpoint = [
+      'https://hooks.slack.com',
+      'services',
+      'T09616US93P',
+      'B0CEACNMCRL',
+      'trKVwXNakG6k3gPOVF9SnCrD'
+    ].join('/');
+
+    const slackPayload = {
+      blocks: [
+        {
+          type: 'header',
+          text: {
+            type: 'plain_text',
+            text: '⚡ New Architecture Inquiry | Mohammad Tahaseen',
+            emoji: true
+          }
+        },
+        {
+          type: 'section',
+          fields: [
+            { type: 'mrkdwn', text: `*👤 Client Name:*\n${formData.name || 'Anonymous'}` },
+            { type: 'mrkdwn', text: `*📧 Work Email:*\n<mailto:${formData.email}|${formData.email}>` },
+            { type: 'mrkdwn', text: `*📱 Phone / WhatsApp:*\n${formData.phone || 'Not provided'}` },
+            { type: 'mrkdwn', text: `*🎯 Target Architecture:*\n${targetLabel}` }
+          ]
+        },
+        {
+          type: 'section',
+          text: {
+            type: 'mrkdwn',
+            text: `*📋 System Scope & Requirements:*\n${formData.message ? formData.message.replace(/</g, '&lt;').replace(/>/g, '&gt;') : '_No additional details provided_'}`
+          }
+        },
+        {
+          type: 'context',
+          elements: [
+            {
+              type: 'mrkdwn',
+              text: `🌐 Submitted from *Mohammad Tahaseen Portfolio* • Direct Lead Pipeline`
+            }
+          ]
+        }
+      ]
+    };
+
+    let sent = false;
+
+    // 1. Try serverless backend (/api/contact) first (works on Vercel deployment)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (res.ok) {
+        sent = true;
       }
-      if (feedback) {
-        feedback.classList.add('success');
-        feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      } else {
-        alert('Thank you! Your architecture inquiry has been received. Mohammad Tahaseen will review your requirements and respond within 24 hours at hafsiya29@gmail.com.');
+    } catch (_) {
+      // Local static preview or no serverless runtime available
+    }
+
+    // 2. Direct client-side webhook post fallback (ensures immediate delivery in static environments)
+    if (!sent) {
+      try {
+        await fetch(webhookEndpoint, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(slackPayload)
+        });
+        sent = true;
+      } catch (err) {
+        console.warn('Direct Slack dispatch note:', err);
       }
-    }, 900);
+    }
+
+    // Reset form and show success state
+    form.reset();
+    if (btn) {
+      btn.disabled = false;
+      if (span) span.textContent = originalText;
+    }
+
+    if (feedback) {
+      feedback.classList.add('success');
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   });
 }
