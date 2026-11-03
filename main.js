@@ -470,6 +470,7 @@ function initContactForm() {
       salon: 'Salon',
       'social-media': 'Social Media Content Automation',
       'lead-gen': 'Lead Generation Pipeline',
+      'email-automation': 'Email Automation System',
       other: 'Other'
     };
 
