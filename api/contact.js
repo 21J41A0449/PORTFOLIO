@@ -20,13 +20,11 @@ export default async function handler(req, res) {
     const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL || webhookParts.join('/');
 
     const pipelineLabels = {
-      clinic: 'WhatsApp AI Medical Receptionist (Clinics)',
-      salon: 'Dynamic Multi-Service AI Concierge (Luxury Salons & Spas)',
-      voice: 'Real-Time Inbound Voice Phone Receptionist',
-      haya: 'Autonomous RAG WhatsApp Sales Agent ("Haya")',
-      outbound: 'B2B Outbound Lead Generation & Scraping Engine',
-      saas: 'Multi-Tenant SaaS Platform & Executive Dashboard',
-      custom: 'Custom Enterprise Architecture'
+      clinic: 'Clinic',
+      salon: 'Salon',
+      'social-media': 'Social Media Content Automation',
+      'lead-gen': 'Lead Generation Pipeline',
+      other: 'Other'
     };
 
     const targetLabel = pipelineLabels[pipeline] || pipeline || 'Not Specified';
